@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "DM Serif Display", serif;
+  --font-sans: "Inter", sans-serif;
+
+  --color-brand-bg: #FBF8F4;
+  --color-brand-card: #FFFFFF;
+  --color-brand-primary: #458B73;
+  --color-brand-primary-hover: #3B775F;
+  --color-brand-primary-light: #EEF5F0;
+  --color-brand-beige: #F7F2EC;
+  --color-brand-border: #ECE7DF;
+  --color-brand-text-primary: #1E1E1E;
+  --color-brand-text-secondary: #666666;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-brand-bg text-brand-text-primary antialiased selection:bg-brand-primary selection:text-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-brand-text-primary;
+  }
+}
+
+@utility scrollbar-hide {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
