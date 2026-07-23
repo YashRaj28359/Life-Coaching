@@ -16,7 +16,7 @@ export default function ProcessSection() {
           } 
         />
         
-        <div className="mt-20 grid gap-12 lg:grid-cols-5 lg:gap-4">
+        <div className="mt-20 grid gap-12 lg:grid-cols-4 lg:gap-6">
           {processSteps.map((step, index) => (
             <ProcessCard
               key={step.id}

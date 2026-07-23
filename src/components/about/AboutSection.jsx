@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 import Container from '../layout/Container';
 import SectionTitle from '../common/SectionTitle';
 import ReelsCarousel from './ReelsCarousel';
-
 export default function AboutSection() {
   return (
-    <section className="bg-brand-bg border-t border-brand-border pb-32 pt-8 lg:h-screen lg:min-h-[700px] lg:flex lg:items-center lg:py-0" id="about-me">
+    <section className="bg-brand-bg border-t border-brand-border pt-12 pb-24 lg:pt-16 lg:pb-32 lg:min-h-screen overflow-x-hidden" id="about-me">
       <div className="w-full px-6 lg:px-12">
         <SectionTitle 
           label="About Me" 
@@ -15,11 +15,24 @@ export default function AboutSection() {
             </>
           } 
         />
-        <div className="mt-12 grid items-center gap-16 lg:grid-cols-2 lg:gap-20">
+        <div className="mt-12 grid items-stretch gap-16 lg:grid-cols-[400px_minmax(0,1fr)] lg:gap-20">
           
-          {/* Left Content - Reels Carousel */}
-          <div className="w-full overflow-hidden">
-            <ReelsCarousel />
+          {/* Left Content - Image */}
+          <div className="flex justify-center lg:justify-start h-full">
+            <motion.div 
+              className="relative w-full max-w-[400px] overflow-hidden rounded-3xl aspect-[3/4] lg:aspect-auto lg:h-full shadow-2xl"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1000&auto=format&fit=crop" 
+                alt="Coach Portrait" 
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            </motion.div>
           </div>
 
           {/* Right Content - Text */}
@@ -29,8 +42,8 @@ export default function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="mb-8">
-               <div className="mb-4 flex items-center gap-4">
+            <div className="mb-6">
+               <div className="mb-2 flex items-center gap-4">
                  <span className="font-serif text-4xl text-brand-text-primary md:text-5xl lg:text-6xl">
                    Meet Your Coach
                  </span>
@@ -40,7 +53,11 @@ export default function AboutSection() {
                </h2>
             </div>
             
-            <div className="mt-8 space-y-6 text-lg text-brand-text-secondary">
+            <div className="mb-6 w-full">
+              <ReelsCarousel />
+            </div>
+            
+            <div className="space-y-4 text-base lg:text-lg text-brand-text-secondary">
               <p>
                 I believe that everyone has the potential to live a life of purpose, joy, and fulfillment. For over a decade, I’ve dedicated myself to helping individuals uncover their true passions, overcome limiting beliefs, and create actionable paths toward their dreams.
               </p>
@@ -49,8 +66,9 @@ export default function AboutSection() {
               </p>
             </div>
             
-            <button className="mt-10 rounded-full bg-brand-primary px-8 py-3.5 text-sm font-medium text-white transition-colors hover:bg-brand-primary-hover">
-              Learn More About Me
+            <button className="mt-6 flex items-center gap-2 rounded-full bg-brand-primary px-8 py-3.5 text-sm font-medium text-white transition-colors hover:bg-brand-primary-hover">
+              Book an Appointment
+              <ArrowRight className="h-4 w-4" />
             </button>
           </motion.div>
 

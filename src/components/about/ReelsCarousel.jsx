@@ -39,7 +39,7 @@ export default function ReelsCarousel() {
         {duplicatedReels.map((reel, index) => (
           <div
             key={`${reel.id}-${index}`}
-            className="relative h-[400px] w-[240px] shrink-0 overflow-hidden rounded-3xl shadow-xl lg:h-[450px] lg:w-[280px]"
+            className="relative h-[200px] w-[120px] shrink-0 overflow-hidden rounded-2xl shadow-lg lg:h-[240px] lg:w-[144px]"
           >
             <img 
               src={reel.image}

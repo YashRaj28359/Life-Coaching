@@ -62,7 +62,7 @@ export default function Hero() {
 
             <div className="flex flex-wrap items-center gap-4">
               <PrimaryButton withArrow>Book an Appointment</PrimaryButton>
-              <SecondaryButton icon={Play}>Watch Video</SecondaryButton>
+            
             </div>
           </motion.div>
 

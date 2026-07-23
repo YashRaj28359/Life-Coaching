@@ -3,9 +3,7 @@ import Hero from '../components/hero/Hero';
 import CoachingSection from '../components/coaching/CoachingSection';
 import ProcessSection from '../components/process/ProcessSection';
 import AboutSection from '../components/about/AboutSection';
-import DifferentSection from '../components/different/DifferentSection';
-import TestimonialSection from '../components/testimonials/TestimonialSection';
-import FAQSection from '../components/faq/FAQSection';
+import TabbedInfoSection from '../components/layout/TabbedInfoSection';
 import CTASection from '../components/cta/CTASection';
 import Footer from '../components/layout/Footer';
 
@@ -19,9 +17,7 @@ export default function Home() {
         <CoachingSection />
         <ProcessSection />
         <AboutSection />
-        <DifferentSection />
-        <TestimonialSection />
-        <FAQSection />
+        <TabbedInfoSection />
         <CTASection />
       </main>
 
